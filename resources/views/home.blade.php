@@ -4,38 +4,34 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
+            @if(Auth::user()!=null)
+                <div class="align-self-center">
+                    <a href="{{ route('article.create') }}" class="btn btn-lg btn-dark" role="button">Add new article</a>
+                </div>
+            @endif
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-
-
-                    @if (session('status'))
+                @if (session('status'))
+                    <div class="card-body">
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
-                    @endif
-
-                    {{ __('Welcome to my page.') }}
-                </div>
+                     </div>
+                @endif
 
 
-                    @if(Auth::user()!=null)
-                            <div class="align-self-center">
-                                <a href="{{ route('article.create') }}" class="btn btn-lg btn-dark" role="button">Add new article</a>
-                            </div>
-                    @endif
+
 
 
 
                 @forelse($articles->reverse()  as $article)
-                    <div class="card mt-5">
+                    <div class="card mt-10 mb-10">
                         @if($article->img_url!=null)
                             <img class="card-img-top" src="{{ $article->img_url }}" alt="Card image cap">
                         @endif
                         <div class="card-body">
                             <h5 class="card-title">{{ $article->title }}</h5>
-                            <h6 class="card-title text-muted">{{ \App\Models\User::find($article->user_id)->name }}</h6>
+                            <h6 class="card-title text-muted">Author: {{ \App\Models\User::find($article->user_id)->name }}</h6>
                             <p class="card-text">{!!  $article->text !!}</p>
                             <p class="card-text bg-light">{{$article->updated_at->diffForHumans()}}</p>
                         </div>

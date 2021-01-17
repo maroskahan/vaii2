@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="Pridanie funkcie add article, nastavenie policies">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Policies/ArticlePolicy.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ArticleFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_17_113635_create_article_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_17_153300_create_privileges_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_17_153809_alter_table_articles_cascade_deletes.php" afterDir="false" />
+    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="pridany footer, zmeneny dizajn stranky">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/article/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/article/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +180,7 @@
       <workItem from="1610644032175" duration="7713000" />
       <workItem from="1610827509758" duration="5016000" />
       <workItem from="1610833131806" duration="35000" />
-      <workItem from="1610876427290" duration="30976000" />
+      <workItem from="1610876427290" duration="32602000" />
     </task>
     <task id="LOCAL-00001" summary="Prilhasovanie/Registracia">
       <created>1610883163039</created>
@@ -213,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610904985262</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pridany footer, zmeneny dizajn stranky">
+      <created>1610910122693</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610910122694</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,7 +220,8 @@
     <MESSAGE value="Prilhasovanie/Registracia" />
     <MESSAGE value="Pridanie blogu na hlavnu stranku - pridane funkcie edit article, delete article." />
     <MESSAGE value="Pridanie funkcie add article, nastavenie policies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pridanie funkcie add article, nastavenie policies" />
+    <MESSAGE value="pridany footer, zmeneny dizajn stranky" />
+    <option name="LAST_COMMIT_MESSAGE" value="pridany footer, zmeneny dizajn stranky" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610643418448">

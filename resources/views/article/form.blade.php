@@ -19,7 +19,7 @@
     </div>
     <div class="form-group">
         <label for="text">Text</label>
-        <textarea type="text" class="form-control" id="text" name="text" placeholder="Text clanku" value="{{ old('text', @$model->text) }}"></textarea>
+        <textarea type="text" class="form-control" id="text" name="text" placeholder="Text clanku" value="">{{ old('text', @$model->text) }}</textarea>
     </div>
     <div class="form-group">
         <input type="submit" class="btn btn-primary form-control">
