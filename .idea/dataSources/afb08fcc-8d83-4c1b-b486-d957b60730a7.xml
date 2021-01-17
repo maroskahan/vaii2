@@ -5120,8 +5120,7 @@
     </column>
     <column id="1223" parent="415" name="user_id">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>bigint(20) unsigned|0s</DataType>
     </column>
     <column id="1224" parent="415" name="title">
       <Position>3</Position>
@@ -5145,153 +5144,177 @@
       <Position>7</Position>
       <DataType>text|0s</DataType>
     </column>
-    <key id="1229" parent="415" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
+    <index id="1229" parent="415" name="articles_id_uindex">
       <ColNames>id</ColNames>
-      <Primary>1</Primary>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="1230" parent="415" name="articles_users_id_fk">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="1231" parent="415" name="articles_id_uindex">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>articles_id_uindex</UnderlyingIndexName>
     </key>
-    <column id="1230" parent="416" name="id">
+    <foreign-key id="1232" parent="415" name="articles_users_id_fk">
+      <ColNames>user_id</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="1233" parent="416" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="1231" parent="416" name="uuid">
+    <column id="1234" parent="416" name="uuid">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1232" parent="416" name="connection">
+    <column id="1235" parent="416" name="connection">
       <Position>3</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1233" parent="416" name="queue">
+    <column id="1236" parent="416" name="queue">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1234" parent="416" name="payload">
+    <column id="1237" parent="416" name="payload">
       <Position>5</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1235" parent="416" name="exception">
+    <column id="1238" parent="416" name="exception">
       <Position>6</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1236" parent="416" name="failed_at">
+    <column id="1239" parent="416" name="failed_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>current_timestamp()</DefaultExpression>
     </column>
-    <index id="1237" parent="416" name="failed_jobs_uuid_unique">
+    <index id="1240" parent="416" name="failed_jobs_uuid_unique">
       <ColNames>uuid</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="1238" parent="416" name="PRIMARY">
+    <key id="1241" parent="416" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="1239" parent="416" name="failed_jobs_uuid_unique">
+    <key id="1242" parent="416" name="failed_jobs_uuid_unique">
       <ColNames>uuid</ColNames>
       <UnderlyingIndexName>failed_jobs_uuid_unique</UnderlyingIndexName>
     </key>
-    <column id="1240" parent="417" name="id">
+    <column id="1243" parent="417" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="1241" parent="417" name="migration">
+    <column id="1244" parent="417" name="migration">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1242" parent="417" name="batch">
+    <column id="1245" parent="417" name="batch">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="1243" parent="417" name="PRIMARY">
+    <key id="1246" parent="417" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="1244" parent="418" name="email">
+    <column id="1247" parent="418" name="email">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1245" parent="418" name="token">
+    <column id="1248" parent="418" name="token">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1246" parent="418" name="created_at">
+    <column id="1249" parent="418" name="created_at">
       <Position>3</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="1247" parent="418" name="password_resets_email_index">
+    <index id="1250" parent="418" name="password_resets_email_index">
       <ColNames>email</ColNames>
       <Type>btree</Type>
     </index>
-    <column id="1248" parent="419" name="id">
+    <column id="1251" parent="419" name="id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="1249" parent="419" name="name">
+    <column id="1252" parent="419" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1250" parent="419" name="email">
+    <column id="1253" parent="419" name="email">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1251" parent="419" name="email_verified_at">
+    <column id="1254" parent="419" name="email_verified_at">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <column id="1252" parent="419" name="password">
+    <column id="1255" parent="419" name="password">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="1253" parent="419" name="remember_token">
+    <column id="1256" parent="419" name="remember_token">
       <Position>6</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="1254" parent="419" name="created_at">
+    <column id="1257" parent="419" name="created_at">
       <Position>7</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <column id="1255" parent="419" name="updated_at">
+    <column id="1258" parent="419" name="updated_at">
       <Position>8</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <column id="1256" parent="419" name="deleted_at">
+    <column id="1259" parent="419" name="deleted_at">
       <Position>9</Position>
       <DataType>timestamp|0s</DataType>
     </column>
-    <index id="1257" parent="419" name="users_email_unique">
+    <index id="1260" parent="419" name="users_id_uindex">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="1261" parent="419" name="users_email_unique">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="1258" parent="419" name="PRIMARY">
+    <key id="1262" parent="419" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="1259" parent="419" name="users_email_unique">
+    <key id="1263" parent="419" name="users_id_uindex">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>users_id_uindex</UnderlyingIndexName>
+    </key>
+    <key id="1264" parent="419" name="users_email_unique">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>users_email_unique</UnderlyingIndexName>
     </key>

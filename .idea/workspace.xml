@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="Prilhasovanie/Registracia">
-      <change afterPath="$PROJECT_DIR$/resources/views/article/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/article/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/article/form.blade.php" afterDir="false" />
+    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="Pridanie blogu na hlavnu stranku - pridane funkcie edit article, delete article.">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/afb08fcc-8d83-4c1b-b486-d957b60730a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/afb08fcc-8d83-4c1b-b486-d957b60730a7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/UserPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_213029_create_categories_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +182,7 @@
       <workItem from="1610644032175" duration="7713000" />
       <workItem from="1610827509758" duration="5016000" />
       <workItem from="1610833131806" duration="35000" />
-      <workItem from="1610876427290" duration="16115000" />
+      <workItem from="1610876427290" duration="26168000" />
     </task>
     <task id="LOCAL-00001" summary="Prilhasovanie/Registracia">
       <created>1610883163039</created>
@@ -198,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610883163039</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Pridanie blogu na hlavnu stranku - pridane funkcie edit article, delete article.">
+      <created>1610894661630</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610894661630</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +206,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Prilhasovanie/Registracia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prilhasovanie/Registracia" />
+    <MESSAGE value="Pridanie blogu na hlavnu stranku - pridane funkcie edit article, delete article." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridanie blogu na hlavnu stranku - pridane funkcie edit article, delete article." />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1368" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610643418448">
@@ -234,10 +235,22 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1061" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1610643580750" />
-    <state x="803" y="336" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610893400262">
+    <state x="826" y="397" width="316" height="246" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1610904776337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="803" y="336" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610893400262" />
+    <state x="826" y="397" width="316" height="246" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610904776337" />
+    <state x="540" y="175" key="com.intellij.database.dbimport.ImportDialog" timestamp="1610898135282">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="175" key="com.intellij.database.dbimport.ImportDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610898135282" />
+    <state x="756" y="340" width="408" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1610902666528">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="756" y="340" width="408" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610902666528" />
+    <state x="379" y="184" width="702" height="527" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610904794321">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="379" y="184" width="702" height="527" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610904794321" />
     <state x="-1253" y="119" width="585" height="801" key="find.popup" timestamp="1610645814313">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>

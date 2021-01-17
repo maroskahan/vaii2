@@ -123,4 +123,9 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('user.index');
     }
+
+    function destroyAllByUser(User $user)
+    {
+        DB::table('posts')->where('user_id', '=', 1)->delete();
+    }
 }
