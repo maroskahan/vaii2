@@ -20,8 +20,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div id="app" style="">
+        <nav id="main" class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -75,15 +75,20 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="margin-bottom: 50px;">
             @yield('content')
         </main>
     </div>
-    <footer class="footer mt-auto py-1 bg-dark">
+    <footer class="footer bg-dark navbar-dark fixed-bottom navbar-expand-lg" style="">
         <div class="container">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto ">
                 @auth
                     <a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a>
+                    <a class="nav-link" style="color: red;" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
                 @endauth
             </ul>
         </div>

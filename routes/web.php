@@ -37,6 +37,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::get('/about_us', [App\Http\Controllers\HomeController::class, 'about_us'])->name('about_us');
 
+Route::get('/editor', [App\Http\Controllers\EditorController::class], 'editor');
+
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('user', App\Http\Controllers\UserController::class);
     Route::resource('article', App\Http\Controllers\ArticleController::class);

@@ -21,8 +21,8 @@
 
 
                     @if(Auth::user()!=null)
-                            <div class="mb-2 mt-2 align-self-center">
-                                <a href="{{ route('article.create') }}" class="btn btn-sm btn-success" role="button">Add new article</a>
+                            <div class="align-self-center">
+                                <a href="{{ route('article.create') }}" class="btn btn-lg btn-dark" role="button">Add new article</a>
                             </div>
                     @endif
 
@@ -36,13 +36,13 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $article->title }}</h5>
                             <h6 class="card-title text-muted">{{ \App\Models\User::find($article->user_id)->name }}</h6>
-                            <p class="card-text">{{$article->text}}</p>
-                            <p class="card-text">{{$article->updated_at->diffForHumans()}}</p>
+                            <p class="card-text">{!!  $article->text !!}</p>
+                            <p class="card-text bg-light">{{$article->updated_at->diffForHumans()}}</p>
                         </div>
                         @if(Auth::user()!=null)
                             @if(Auth::user()->can('create', $article))
-                                <a href="{{ route('article.edit', [$article->id]) }}" title="Edit" class="btn btn-sm btn-primary">Edit</a>
-                                <a href="{{ route('article.delete', [$article->id]) }}" title="Delete" data-method="DELETE" class="btn btn-sm btn-danger" data-confrim="Are you sure?">Delete</a>
+                                <a href="{{ route('article.edit', [$article->id]) }}" title="Edit" class="btn btn-sm btn-light">Edit</a>
+                                <a href="{{ route('article.delete', [$article->id]) }}" title="Delete" data-method="DELETE" class="btn btn-sm btn-dark" data-confrim="Are you sure?">Delete</a>
                             @endif
                         @endif
                     </div>
