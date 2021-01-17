@@ -16,6 +16,29 @@
 
                     {{ __('Welcome to my page.') }}
                 </div>
+
+                @forelse($articles as $article)
+                    <div class="card mt-5">
+                        @if($article->img_url!=null)
+                            <img class="card-img-top" src="{{ $article->img_url }}" alt="Card image cap">
+                        @endif
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $article->title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ \App\Models\User::find($article->user_id)->username }}</h6>
+                            <p class="card-text">{{$article->text}}</p>
+                            <p class="card-text">{{$article->updated_at->diffForHumans()}}</p>
+                        </div>
+                        @if(Auth::user()!=null)
+                            @if(Auth::user()->can('create', $article))
+                                <a href="{{ route('article.edit', [$article->id]) }}" title="Edit" class="btn btn-sm btn-primary">Edit</a>
+                                <a href="{{ route('article.delete', [$article->id]) }}" title="Delete" data-method="DELETE" class="btn btn-sm btn-danger" data-confrim="Are you sure?">Delete</a>
+                            @endif
+                        @endif
+                    </div>
+                @empty
+                    <p>There are no articles!</p>
+                @endforelse
+
             </div>
         </div>
     </div>

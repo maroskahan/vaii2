@@ -34,9 +34,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-link" href="{{ route('about_us') }}">{{ __('O nás') }}</a>
-                        @auth
-                            <a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a>
-                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -82,5 +79,14 @@
             @yield('content')
         </main>
     </div>
+    <footer class="footer mt-auto py-1 bg-dark">
+        <div class="container">
+            <ul class="navbar-nav mr-auto">
+                @auth
+                    <a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a>
+                @endauth
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
