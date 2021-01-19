@@ -19,7 +19,7 @@ class UserPolicy
      */
     public function viewAny(User $user)
     {
-        return Auth::user()->name == 'admin';
+        return Auth::user()->email == 'admin@admin.admin';
     }
 
     /**
@@ -32,7 +32,7 @@ class UserPolicy
 
     public function view(User $user, User $model)
     {
-        return true;
+        return Auth::user()->email == 'admin@admin.admin';
     }
 
     /**
@@ -43,7 +43,7 @@ class UserPolicy
      */
     public function create(User $user)
     {
-        return Auth::user()->name == 'admin';
+        return Auth::user()->email == 'admin@admin.admin';
     }
 
     /**

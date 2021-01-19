@@ -13,11 +13,11 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        //can('create', \App\Models\User::class)
+                        @can('create', \App\Models\User::class)
                             <div class="mb-3">
                                  <a href="{{ route('user.create') }}" class="btn btn-sm btn-success" role="button">Add new user</a>
                             </div>
-                        //endcan
+                        @endcan
                         {!! $grid->show() !!}
                     </div>
                 </div>

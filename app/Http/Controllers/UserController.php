@@ -30,7 +30,7 @@ class UserController extends Controller
             ->setActionColumn([
                 'wrapper' => function ($value, $row) {
                     return '<a href="' . route('user.edit', [$row->id]) . '" title="Edit" class="btn btn-sm btn-primary">Edit</a>
-                <a href="' . route('user.delete', $row->id) . '" title="Delete" data-method="DELETE" class="btn btn-sm btn-danger" data-confrim="Are you sure?">Delete</a>';
+                <a href="' . route('user.delete', $row->id) . '" title="Delete" data-method="DELETE" class="btn btn-sm btn-danger">Delete</a>';
                 }
             ]);
         return view('user.index', ['grid' => $grid
@@ -124,8 +124,4 @@ class UserController extends Controller
         return redirect()->route('user.index');
     }
 
-    function destroyAllByUser(User $user)
-    {
-        DB::table('posts')->where('user_id', '=', 1)->delete();
-    }
 }

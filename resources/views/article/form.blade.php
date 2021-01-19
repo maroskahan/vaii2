@@ -22,6 +22,10 @@
         <textarea type="text" class="form-control" id="text" name="text" placeholder="Text clanku" value="">{{ old('text', @$model->text) }}</textarea>
     </div>
     <div class="form-group">
+        <label for="img_url">Adresa obrazku</label>
+        <input type="text" class="form-control" id="img_url" name="img_url" placeholder="Adresa obrazku" value="{{ old('img_url', @$model->img_url) }}">
+    </div>
+    <div class="form-group">
         <input type="submit" class="btn btn-primary form-control">
     </div>
 </form>

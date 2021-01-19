@@ -27,7 +27,7 @@ class ArticleController extends Controller
         return redirect()->route('home');
     }
 
-    public function edit(Article $article)
+    public function edit(Request $request, Article $article)
     {
         return view('article.edit', [
             'action' => route('article.update', $article->id),
@@ -50,6 +50,6 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         $article->delete();
-        return redirect()->route('home');
+        return response()->json(['success'=>'Článok bol vymazaný.']);
     }
 }
