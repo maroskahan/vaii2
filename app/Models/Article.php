@@ -11,15 +11,8 @@ class Article extends Model
 
     protected $fillable = [
         'title',
-        'text'
-    ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
+        'text',
+        'img_url',
+        'user_id'
     ];
 }

@@ -3,11 +3,11 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-ad-12">
                 <div class="card">
-                    <div class="card-header">{{ __('Add new user') }}</div>
+                    <div class="card-header">{{ __('Pages') }}</div>
                     <div class="card-body">
-                        @include('user.form')
+                        {!! $grid->show() !!}
                     </div>
                 </div>
             </div>

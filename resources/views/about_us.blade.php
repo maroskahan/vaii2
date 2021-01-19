@@ -5,7 +5,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
     <div class="aboutus-section">
-        <div class="container">
+        <div class="container" style="background-color: white;">
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="aboutus">

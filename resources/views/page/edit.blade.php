@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Pridat novy clanok.') }}</div>
+                    <div class="card-header">{{ __('Upravit stranku.') }}</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        @include('article.form')
+                        @include('page.form')
                     </div>
                 </div>
             </div>

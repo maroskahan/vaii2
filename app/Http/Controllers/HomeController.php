@@ -34,4 +34,14 @@ class HomeController extends Controller
     {
         return view('about_us');
     }
+
+    public function page1()
+    {
+        return view('page1');
+    }
+
+    public function CSV()
+    {
+        return view('CSV');
+    }
 }

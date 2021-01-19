@@ -11,6 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +21,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app" style="">
@@ -34,6 +38,8 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-link" href="{{ route('about_us') }}">{{ __('O nás') }}</a>
+                        <a class="nav-link" href="{{ route('page1') }}">{{ __('Page1') }}</a>
+                        <a class="nav-link" href="{{ route('CSV') }}">{{ __('Načítavanie CSV') }}</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -79,19 +85,21 @@
             @yield('content')
         </main>
     </div>
+    @auth
     <footer class="footer bg-dark navbar-dark fixed-bottom navbar-expand-lg" style="">
         <div class="container">
             <ul class="navbar-nav mr-auto ">
-                @auth
+                @can('view', Auth::user(), \App\Models\User::class)
                     <a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a>
+                @endif
                     <a class="nav-link" style="color: red;" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                        document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
-                @endauth
             </ul>
         </div>
+    @endauth
     </footer>
 </body>
 </html>

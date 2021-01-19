@@ -19,8 +19,8 @@
     </div>
 
     <div class="form-group">
-        <label for="img_url">Adresa obrazku</label>
-        <input type="text" class="form-control" id="img_url" name="img_url" placeholder="Adresa obrazku" value="{{ old('img_url', @$model->img_url) }}">
+        <label for="text">Titulok v menu</label>
+        <input type="text" class="form-control" id="menu_title" name="menu_title" placeholder="Titulok v menu" value="{{ old('title', @$model->menu_title) }}">
     </div>
 
     <div class="form-group">

@@ -9,6 +9,17 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
     public function create()
     {
         return view('article.create', ['action' => route('article.store'),
@@ -19,7 +30,9 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'text' => 'required']);
+            'text' => 'required',
+            'img_url' => 'required'
+        ]);
 
         $article = Article::create($request->all());
         $article->user_id = Auth::user()->getAuthIdentifier();
@@ -43,6 +56,7 @@ class ArticleController extends Controller
             'text' => 'required'
         ]);
 
+        $article->user_id = Auth::user()->getAuthIdentifier();
         $article->update($request->all());
         return redirect()->route('home');
     }
