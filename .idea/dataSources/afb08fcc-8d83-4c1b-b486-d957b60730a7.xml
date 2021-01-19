@@ -5127,7 +5127,7 @@
     </column>
     <column id="1225" parent="415" name="title">
       <Position>3</Position>
-      <DataType>text|0s</DataType>
+      <DataType>varchar(150)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="1226" parent="415" name="text">
@@ -5247,7 +5247,7 @@
     </column>
     <column id="1249" parent="418" name="menu_title">
       <Position>2</Position>
-      <DataType>text|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
     <column id="1250" parent="418" name="title">
@@ -5290,6 +5290,7 @@
       <ColNames>user_id</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
     <column id="1259" parent="419" name="email">

@@ -9,15 +9,15 @@
     @method($method)
     <div class="form-group">
         <label for="name">Full name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Full name" value="{{ old('name', @$model->name) }}">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Full name" maxlength="10" value="{{ old('name', @$model->name) }}">
     </div>
     <div class="form-group">
         <label for="email">Email address</label>
-            <input type="text" class="form-control" id="email" name="email" placeholder="email" value="{{ old('name', @$model->email) }}">
+            <input type="text" class="form-control" id="email" name="email" placeholder="email"  maxlength="50" value="{{ old('name', @$model->email) }}">
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="password">
+            <input type="password" class="form-control" id="password" name="password" minlength="8" maxlength="30" placeholder="password">
     </div>
     <div class="form-group">
         <label for="password">Password again</label>
