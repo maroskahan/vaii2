@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        @include('article.form')
+                        @include('page.form')
                     </div>
                 </div>
             </div>

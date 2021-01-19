@@ -52,6 +52,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::put('page/{page}/update', ['as' => 'page.update', 'uses' => 'App\Http\Controllers\PageController@update']);
     Route::get('page/{page}/edit', [App\Http\Controllers\PageController::class, 'edit'])->name('page.edit');
     Route::get('page/index', [App\Http\Controllers\PageController::class, 'index'])->name('page.index');
+    Route::get('page/create', [App\Http\Controllers\PageController::class, 'create'])->name('page.create');
+    Route::post('page/store', [App\Http\Controllers\PageController::class, 'store'])->name('page.store');
     Route::get('page/', [App\Http\Controllers\PageController::class, 'index'])->name('page.index');
 });
 

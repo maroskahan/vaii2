@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="Pridany AJAX - kontrola emailu, pridane stranky (db, views)">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afb08fcc-8d83-4c1b-b486-d957b60730a7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/afb08fcc-8d83-4c1b-b486-d957b60730a7.xml" afterDir="false" />
+    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="Pridany AJAX - kontrola mena, stranky na komplet.. urcite este nieco ale neviem co presne">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Policies/UserPolicy.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Policies/UserPolicy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/CSV.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/contact.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/info.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +183,7 @@
       <workItem from="1610644032175" duration="7713000" />
       <workItem from="1610827509758" duration="5016000" />
       <workItem from="1610833131806" duration="35000" />
-      <workItem from="1610876427290" duration="67371000" />
+      <workItem from="1610876427290" duration="67831000" />
     </task>
     <task id="LOCAL-00001" summary="Prilhasovanie/Registracia">
       <created>1610883163039</created>
@@ -244,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611076000341</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Pridany AJAX - kontrola mena, stranky na komplet.. urcite este nieco ale neviem co presne">
+      <created>1611084757079</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611084757079</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +255,8 @@
     <MESSAGE value="zmeny v dizajne + pridany generator obrazkov" />
     <MESSAGE value="Upraveny delete - ajax" />
     <MESSAGE value="Pridany AJAX - kontrola emailu, pridane stranky (db, views)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pridany AJAX - kontrola emailu, pridane stranky (db, views)" />
+    <MESSAGE value="Pridany AJAX - kontrola mena, stranky na komplet.. urcite este nieco ale neviem co presne" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pridany AJAX - kontrola mena, stranky na komplet.. urcite este nieco ale neviem co presne" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1611047475742">
@@ -269,10 +267,10 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1610643418448" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611076503073">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611085073759">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611076503073" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611085073759" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1610882840280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -304,10 +302,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="340" width="408" height="355" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610902666528" />
-    <state x="788" y="216" width="902" height="703" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1611084297921">
+    <state x="788" y="216" width="902" height="703" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1611085001799">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="788" y="216" width="902" height="703" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611084297921" />
+    <state x="788" y="216" width="902" height="703" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611085001799" />
     <state x="-1253" y="119" width="585" height="801" key="find.popup" timestamp="1610645814313">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
