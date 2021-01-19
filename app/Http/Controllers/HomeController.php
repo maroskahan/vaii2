@@ -40,8 +40,5 @@ class HomeController extends Controller
         return view('page1');
     }
 
-    public function CSV()
-    {
-        return view('CSV');
-    }
+
 }

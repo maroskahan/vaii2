@@ -9,7 +9,7 @@
                     <h1>{{ $page->title }}</h1>
                     <h6 class="card-title text-muted bg-light">Author: {{ \App\Models\User::find($page->user_id)->name }}</h6>
                     <p class="card-text bg-light">{{$page->updated_at->diffForHumans()}}</p>
-                    <p class="card-text">{!!  $page->text !!}</p>
+                    <p class="card-text">{!! $page->text !!}</p>
                         <br>
                         <a href="{{ route('page.edit', [$page->id])  }}" title="Edit" class="btn btn-sm btn-primary">Edit</a>
                         <a href="{{ route('page.delete', [$page->id]) }}" title="Delete" data-method="DELETE" class="btn btn-sm btn-danger">Delete</a>

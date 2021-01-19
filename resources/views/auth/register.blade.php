@@ -17,6 +17,7 @@
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
+                                <span id="error_name"></span>
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -98,6 +99,31 @@
                             $('#error_email').html('<label class="text-danger font-weight-bold">Tento email je obsadený! </label>' +
                                 '<img src="https://www.flaticon.com/svg/vstatic/svg/1828/1828599.svg?token=exp=1611065406~hmac=782af410d95fa91b210d5a5527c7c019" style="height: 15px; width: 15px;">');
                             $('#email').addClass('has-error');
+                            $('#register').attr('disabled', 'disabled');
+                        }
+                    }
+                })
+            }
+        });
+
+        $('#name').blur(function () {
+            var name = $('#name').val();
+            var _token = $('input[name="_token"]').val();
+            if (name.length > 0) {
+                $.ajax({
+                    url: "{{ route('name_available.check') }}",
+                    method: "POST",
+                    data: {name: name, _token: _token},
+                    success: function (result) {
+                        if (result == 'ok') {
+                            $('#error_name').html('<label class="text-success font-weight-bold">Toto uživateľské meno sa ešte nepoužíva!</label>' +
+                                '<img src="https://www.flaticon.com/svg/vstatic/svg/845/845646.svg?token=exp=1611065829~hmac=8c103b7d34a9c3d387e5ce8c747d2612" style="height: 15px; width: 15px;">\');');
+                            $('#name').removeClass('has-error');
+                            $('#register').attr('disabled', false);
+                        } else {
+                            $('#error_name').html('<label class="text-danger font-weight-bold">Toto uživateľské meno sa už používa!</label>' +
+                                '<img src="https://www.flaticon.com/svg/vstatic/svg/1828/1828599.svg?token=exp=1611065406~hmac=782af410d95fa91b210d5a5527c7c019" style="height: 15px; width: 15px;">');
+                            $('#name').addClass('has-error');
                             $('#register').attr('disabled', 'disabled');
                         }
                     }

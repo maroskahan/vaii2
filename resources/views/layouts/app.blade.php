@@ -39,7 +39,11 @@
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-link" href="{{ route('about_us') }}">{{ __('O nás') }}</a>
                         <a class="nav-link" href="{{ route('page1') }}">{{ __('Page1') }}</a>
-                        <a class="nav-link" href="{{ route('CSV') }}">{{ __('Načítavanie CSV') }}</a>
+                        @foreach(\App\Models\Page::all()->reverse() as $page)
+                            @if($page->published)
+                                <a class="nav-link" href="{{ route('page.show', $page->id) }}">{{ $page->menu_title }}</a>
+                            @endif
+                        @endforeach
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -89,9 +93,14 @@
     <footer class="footer bg-dark navbar-dark fixed-bottom navbar-expand-lg" style="">
         <div class="container">
             <ul class="navbar-nav mr-auto ">
+                @can('viewAny', Auth::user(), \App\Models\Page::class)
+                    <a class="nav-link" href="{{ route('page.index') }}">{{ __('Pages') }}</a>
+                @endif
+
                 @can('view', Auth::user(), \App\Models\User::class)
                     <a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a>
                 @endif
+
                     <a class="nav-link" style="color: red;" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                        document.getElementById('logout-form').submit();">
