@@ -6,13 +6,7 @@
             <div class="col-ad-12">
                 <div class="card">
                     <div class="card-header">{{ __('Users') }}</div>
-
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
                         @can('create', \App\Models\User::class)
                             <div class="mb-3">
                                  <a href="{{ route('user.create') }}" class="btn btn-sm btn-success" role="button">Add new user</a>

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="fixnuty create page" />
+    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="fixnuty create page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -243,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611085287683</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="pridane neverzionovane subory">
+      <created>1611087286895</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611087286895</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +271,8 @@
     <MESSAGE value="Pridany AJAX - kontrola emailu, pridane stranky (db, views)" />
     <MESSAGE value="Pridany AJAX - kontrola mena, stranky na komplet.. urcite este nieco ale neviem co presne" />
     <MESSAGE value="fixnuty create page" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixnuty create page" />
+    <MESSAGE value="pridane neverzionovane subory" />
+    <option name="LAST_COMMIT_MESSAGE" value="pridane neverzionovane subory" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1611047475742">
@@ -283,11 +296,11 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1232" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1610830830544" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610911797412">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611087351149">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1610911797412" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1610905162098" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611087351149" />
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1611070170932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
