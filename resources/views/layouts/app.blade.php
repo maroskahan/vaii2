@@ -37,11 +37,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <a class="nav-link" href="{{ route('about_us') }}">{{ __('O nás') }}</a>
-                        <a class="nav-link" href="{{ route('page1') }}">{{ __('Page1') }}</a>
+                        <li><a class="nav-link" href="{{ route('about_us') }}">{{ __('O nás') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('page1') }}">{{ __('Page1') }}</a></li>
                         @foreach(\App\Models\Page::all()->reverse() as $page)
                             @if($page->published)
-                                <a class="nav-link" href="{{ route('page.show', $page->id) }}">{{ $page->menu_title }}</a>
+                                <li><a class="nav-link" href="{{ route('page.show', $page->id) }}">{{ $page->menu_title }}</a></li>
                             @endif
                         @endforeach
                     </ul>
@@ -63,7 +63,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ Auth::user()->name }}
                                 </a>
 
@@ -93,19 +93,17 @@
     <footer class="footer bg-dark navbar-dark fixed-bottom navbar-expand-lg" style="">
         <div class="container">
             <ul class="navbar-nav mr-auto ">
-                @can('viewAny', Auth::user(), \App\Models\Page::class)
-                    <a class="nav-link" href="{{ route('page.index') }}">{{ __('Pages') }}</a>
-                @endif
+                <li><a class="nav-link" href="{{ route('page.index') }}">{{ __('Pages') }}</a></li>
 
                 @can('view', Auth::user(), \App\Models\User::class)
-                    <a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a>
+                    <li><a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a></li>
                 @endif
 
-                    <a class="nav-link" style="color: red;" href="{{ route('logout') }}"
+                    <li><a class="nav-link" style="color: red;" href="{{ route('logout') }}"
                        onclick="event.preventDefault();
                        document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
-                    </a>
+                    </a></li>
             </ul>
         </div>
     @endauth

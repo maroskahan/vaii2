@@ -25,7 +25,7 @@
 
     <div class="form-group">
         <label for="text">Text</label>
-        <textarea type="text" class="form-control" id="text" name="text" placeholder="Text clanku" value="">{{ old('text', @$model->text) }}</textarea>
+        <textarea class="form-control" id="text" name="text" placeholder="Text clanku">{{ old('text', @$model->text) }}</textarea>
     </div>
 
     <div class="form-group">

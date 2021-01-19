@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="fixnuty create page">
+    <list default="true" id="444718bb-2d74-4a78-978b-c927dd6f9660" name="Default Changelist" comment="posledne upravy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PageFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PageFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/article/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/article/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/form.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611087286895</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="posledne upravy">
+      <created>1611088284788</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611088284788</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +283,8 @@
     <MESSAGE value="Pridany AJAX - kontrola mena, stranky na komplet.. urcite este nieco ale neviem co presne" />
     <MESSAGE value="fixnuty create page" />
     <MESSAGE value="pridane neverzionovane subory" />
-    <option name="LAST_COMMIT_MESSAGE" value="pridane neverzionovane subory" />
+    <MESSAGE value="posledne upravy" />
+    <option name="LAST_COMMIT_MESSAGE" value="posledne upravy" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1611047475742">
@@ -296,11 +308,15 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1232" y="243" key="NewPhpClassDialog/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1610830830544" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611087351149">
+    <state x="730" y="240" key="RollbackChangesDialog" timestamp="1611092077046">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="730" y="240" key="RollbackChangesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611092077046" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1611088323497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1610911797412" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611087351149" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611088323497" />
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1611070170932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -25,9 +25,9 @@ class PageFactory extends Factory
     {
         return [
             'user_id' => User::inRandomOrder()->get()->first()->id,
-            'menu_title' => $this->faker->realText(10, $indexSize = 2),
-            'title' => $this->faker->realText(30, $indexSize = 2),
-            'text' => $this->faker->text
+            'menu_title' => $this->faker->text(10, $indexSize = 5),
+            'title' => $this->faker->text(30),
+            'text' => $this->faker->realText(5000)
         ];
     }
 }

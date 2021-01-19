@@ -13,6 +13,11 @@
                         <br>
                         <a href="{{ route('page.edit', [$page->id])  }}" title="Edit" class="btn btn-sm btn-primary">Edit</a>
                         <a href="{{ route('page.delete', [$page->id]) }}" title="Delete" data-method="DELETE" class="btn btn-sm btn-danger">Delete</a>
+                        @if ($page->published)
+                        <a href="{{ route('page.publish', [$page->id]) }}" title="Hide" class="btn btn-sm btn-secondary">Hide</a>
+                        @else
+                        <a href="{{ route('page.publish', [$page->id]) }}" title="Publish" class="btn btn-sm btn-secondary">Publish</a>
+                        @endif
                     </div>
                 </div>
             </div>
