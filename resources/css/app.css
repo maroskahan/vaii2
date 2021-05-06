@@ -1,1 +1,12 @@
 
+.navbar .navbar-brand a {
+    padding: 1rem 0;
+    display: block;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    font-family: "Pacifico", cursive;
+    font-size: 2.5rem;
+    color: #2fa360;
+}

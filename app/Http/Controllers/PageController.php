@@ -19,14 +19,14 @@ class PageController extends Controller
             ->setColumn('menu_title', 'Titulok v menu')
             ->setActionColumn([
                 'wrapper' => function ($value, $row) {
-                    $returnVal = '<a href="' . route('page.edit', [$row->id]) . '" title="Edit" class="btn btn-sm btn-primary">Edit</a>
-                <a href="' . route('page.show', [$row->id]) . '" title="Show" class="btn btn-sm btn-secondary">Show</a>
-                <a href="' . route('page.delete', $row->id) . '" title="Delete" data-method="DELETE" class="btn btn-sm btn-danger">Delete</a>';
+                    $returnVal = '<a href="' . route('page.edit', [$row->id]) . '" title="Edit" class="btn btn-sm btn-primary">Upraviť</a>
+                <a href="' . route('page.show', [$row->id]) . '" title="Show" class="btn btn-sm btn-secondary">Zobraziť</a>
+                <a href="' . route('page.delete', $row->id) . '" title="Delete" data-method="DELETE" class="btn btn-sm btn-danger">Vymazať</a> ';
 
                     if ($row->published) {
-                        $returnVal .= '<a href="' . route('page.publish', [$row->id]) . '" title="Hide" class="btn btn-sm btn-secondary">Hide</a>';
+                        $returnVal .= '<a href="' . route('page.publish', [$row->id]) . '" title="Hide" class="btn btn-sm btn-secondary">Skryť</a>';
                     } else {
-                        $returnVal .= '<a href="' . route('page.publish', [$row->id]) . '" title="Publish" class="btn btn-sm btn-secondary">Publish</a>';
+                        $returnVal .= '<a href="' . route('page.publish', [$row->id]) . '" title="Publish" class="btn btn-sm btn-secondary">Publikovať</a>';
                     }
                     return $returnVal;
                 }
@@ -52,7 +52,7 @@ class PageController extends Controller
         $page = Page::create($request->all());
         $page->user_id = Auth::user()->getAuthIdentifier();
         $page->save();
-        return redirect()->route('home');
+        return redirect()->route('page.index');
     }
 
     public function edit(Request $request, Page $page)

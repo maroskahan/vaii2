@@ -25,11 +25,9 @@
 </head>
 <body>
     <div id="app" style="">
-        <nav id="main" class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav id="main" class="navbar navbar-light navbar-expand-md bg-light shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
+                <a href="{{ url('/') }}" class="navbar-left"><img src="{{ asset('img/ruvz_logo_admin.png') }}" class="mr-3"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -37,8 +35,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li><a class="nav-link" href="{{ route('about_us') }}">{{ __('O nás') }}</a></li>
-                        <li><a class="nav-link" href="{{ route('page1') }}">{{ __('Page1') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('home') }}">{{ __('Domov') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('covid') }}">{{ __('COVID-19') }}</a></li>
                         @foreach(\App\Models\Page::all()->reverse() as $page)
                             @if($page->published)
                                 <li><a class="nav-link" href="{{ route('page.show', $page->id) }}">{{ $page->menu_title }}</a></li>
@@ -50,17 +48,6 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -71,7 +58,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Odhlásiť sa') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -84,29 +71,37 @@
                 </div>
             </div>
         </nav>
-
+        <div class="sidenav-backdrop" style="transition: opacity 0.3s ease-out 0s; position: absolute; width: 100%; height: 100%; opacity: 1;"></div>
         <main class="py-4" style="margin-bottom: 50px;">
             @yield('content')
         </main>
     </div>
     @auth
-    <footer class="footer bg-dark navbar-dark fixed-bottom navbar-expand-lg" style="">
-        <div class="container">
-            <ul class="navbar-nav mr-auto ">
-                <li><a class="nav-link" href="{{ route('page.index') }}">{{ __('Pages') }}</a></li>
-
-                @can('view', Auth::user(), \App\Models\User::class)
-                    <li><a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a></li>
-                @endif
-
-                    <li><a class="nav-link" style="color: red;" href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                       document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a></li>
-            </ul>
-        </div>
+        <footer class="footer bg-light navbar-light fixed-bottom navbar-expand-lg" style="">
+            <div class="container">
+                <ul class="navbar-nav mr-auto ">
+                    <li><a class="nav-link" href="{{ route('admin.index') }}">{{ __('Administrácia') }}</a></li>
+                        <li><a class="nav-link" style="color: red;" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                            {{ __('Odhlásiť sa') }}
+                        </a></li>
+                </ul>
+            </div>
+        </footer>
     @endauth
-    </footer>
+    @guest
+        <footer class="footer bg-light navbar-light fixed-bottom navbar-expand-lg" style="">
+            <div class="container">
+                <ul class="navbar-nav mr-auto justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Administrácia') }}</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    @endguest
+
+
 </body>
 </html>

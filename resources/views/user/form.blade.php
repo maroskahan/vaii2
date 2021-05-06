@@ -8,20 +8,20 @@
     @csrf
     @method($method)
     <div class="form-group">
-        <label for="name">Full name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Full name" maxlength="10" value="{{ old('name', @$model->name) }}">
+        <label for="name">Meno</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Meno" maxlength="10" value="{{ old('name', @$model->name) }}">
     </div>
     <div class="form-group">
-        <label for="email">Email address</label>
-            <input type="text" class="form-control" id="email" name="email" placeholder="email"  maxlength="50" value="{{ old('name', @$model->email) }}">
+        <label for="email">E-mailová adresa</label>
+            <input type="text" class="form-control" id="email" name="email" placeholder="E-mailová adresa"  maxlength="50" value="{{ old('name', @$model->email) }}">
     </div>
     <div class="form-group">
-        <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" minlength="8" maxlength="30" placeholder="password">
+        <label for="password">Heslo</label>
+            <input type="password" class="form-control" id="password" name="password" minlength="8" maxlength="30" placeholder="Heslo">
     </div>
     <div class="form-group">
-        <label for="password">Password again</label>
-            <input type="password" class="form-control" id="password_again" name="password_confirmation" placeholder="password">
+        <label for="password">Potvrdenie hesla</label>
+            <input type="password" class="form-control" id="password_again" name="password_confirmation" placeholder="Potvrdenie hesla">
     </div>
     <div class="form-group">
         <input type="submit" class="btn btn-primary form-control">

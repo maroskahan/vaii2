@@ -22,18 +22,9 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $users = \App\Models\User::paginate(25);
-        $grid = new Datagrid($users, $request->get('f', []));
-
-        $grid->setColumn('name',  'Full name')
-            ->setColumn('email', 'Email address')
-            ->setActionColumn([
-                'wrapper' => function ($value, $row) {
-                    return '<a href="' . route('user.edit', [$row->id]) . '" title="Edit" class="btn btn-sm btn-primary">Edit</a>
-                <a href="' . route('user.delete', $row->id) . '" title="Delete" data-method="DELETE" class="btn btn-sm btn-danger">Delete</a>';
-                }
-            ]);
-        return view('user.index', ['grid' => $grid
+        $users = User::all();
+        return view('user.index', [
+            'users' => $users
         ]);
     }
 
@@ -52,7 +43,7 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
     public function store(Request $request)
     {

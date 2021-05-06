@@ -15,11 +15,12 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
-            $table->text('menu_title');
+            $table->string('menu_title', 255);
             $table->text('title');
             $table->text('text');
             $table->bigInteger('user_id', false, true);
             $table->timestamps();
+            $table->tinyInteger(false, false);
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }

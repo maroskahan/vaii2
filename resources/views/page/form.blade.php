@@ -14,8 +14,8 @@
     @csrf
     @method($method)
     <div class="form-group">
-        <label for="text">Title</label>
-        <input type="text" class="form-control" id="title" name="title" placeholder="Titulok" value="{{ old('title', @$model->title) }}">
+        <label for="text">Nadpis</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Nadpis" value="{{ old('title', @$model->title) }}">
     </div>
 
     <div class="form-group">
@@ -25,7 +25,7 @@
 
     <div class="form-group">
         <label for="text">Text</label>
-        <textarea class="form-control" id="text" name="text" placeholder="Text clanku">{{ old('text', @$model->text) }}</textarea>
+        <textarea class="form-control" id="text" name="text" placeholder="Text stránky">{{ old('text', @$model->text) }}</textarea>
     </div>
 
     <div class="form-group">

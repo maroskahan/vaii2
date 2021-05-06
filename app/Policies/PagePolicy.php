@@ -20,7 +20,7 @@ class PagePolicy
      */
     public function viewAny(User $user, Page $page)
     {
-         return $user->email == 'maros.kahan@gmail.com' || $user->email == 'admin@admin.admin';
+        return true;
     }
 
     /**
@@ -44,7 +44,7 @@ class PagePolicy
      */
     public function create(User $user)
     {
-        return $user->email == 'maros.kahan@gmail.com' || $user->email == 'admin@admin.admin';
+        return true;
     }
 
     /**
@@ -56,7 +56,7 @@ class PagePolicy
      */
     public function update(User $user, Page $model)
     {
-        return $user->email == 'maros.kahan@gmail.com' || $user->email == 'admin@admin.admin';
+        return true;
     }
 
     /**
@@ -68,7 +68,7 @@ class PagePolicy
      */
     public function delete(User $user, Page $model)
     {
-        return $user->email == 'maros.kahan@gmail.com' || $user->email == 'admin@admin.admin';
+        return true;
     }
 
 }

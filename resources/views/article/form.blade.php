@@ -14,18 +14,18 @@
     @csrf
     @method($method)
     <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" name="title" placeholder="Titulok" value="{{ old('title', @$model->title) }}">
+        <label for="title">Nadpis</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Nadpis" value="{{ old('title', @$model->title) }}">
     </div>
 
     <div class="form-group">
-        <label for="img_url">Adresa obrazku</label>
-        <input type="text" class="form-control" id="img_url" name="img_url" placeholder="Adresa obrazku" value="{{ old('img_url', @$model->img_url) }}">
+        <label for="img_url">Adresa obrázku</label>
+        <input type="text" class="form-control" id="img_url" name="img_url" placeholder="URL adresa obrázku" value="{{ old('img_url', @$model->img_url) }}">
     </div>
 
     <div class="form-group">
         <label for="text">Text</label>
-        <textarea class="form-control" id="text" name="text" placeholder="Text clanku">{{ old('text', @$model->text) }}</textarea>
+        <textarea class="form-control" id="text" name="text" placeholder="Text článku">{{ old('text', @$model->text) }}</textarea>
     </div>
 
     <div class="form-group">

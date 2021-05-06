@@ -27,6 +27,6 @@ class ArticlePolicy
 
     public function delete(User $user)
     {
-        return Auth::user()->name == 'admin';
+        return true;
     }
 }
